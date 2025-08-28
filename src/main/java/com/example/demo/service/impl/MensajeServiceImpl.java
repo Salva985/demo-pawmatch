@@ -56,7 +56,7 @@ public class MensajeServiceImpl implements MensajeService {
 
     @Override
     public MensajeResponseDTO createMensaje(MensajeRequestDTO request) {
-        Chat chat = chatRepository.findById(request.getRemitenteId())
+        Chat chat = chatRepository.findById(request.getChatId())
                 .orElseThrow(() -> new RuntimeException("Chat no encontrado con id: " + request.getChatId()));
 
         Mascota remitente = mascotaRepository.findById(request.getRemitenteId())
