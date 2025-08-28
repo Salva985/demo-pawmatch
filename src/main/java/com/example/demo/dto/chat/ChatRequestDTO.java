@@ -7,8 +7,6 @@ import lombok.Data;
 @Data
 public class ChatRequestDTO {
 
-    @NotNull
-    private Long id;
 
     @NotNull
     private Long usuario1Id;
